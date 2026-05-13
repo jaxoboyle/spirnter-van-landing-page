@@ -1,0 +1,2771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sprinter Van City | Expert Sprinter Van Repair – Fort Pierce, FL</title>
+  <meta name="description" content="Sprinter Van City offers fast, reliable Sprinter van repairs in Fort Pierce, FL. Call (772) 461-2114 or schedule service online today." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    /* ============================================
+       RESET & VARIABLES
+    ============================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --yellow:         #f5c800;
+      --yellow-glow:    #fde047;
+      --yellow-dark:    #b45309;
+      --green:          #22c55e;
+      --green-glow:     #4ade80;
+      --green-dark:     #15803d;
+      --bg-deep:        #212010;
+      --bg-dark:        #292610;
+      --bg-glass:       rgba(255,255,255,0.13);
+      --border-yellow:  rgba(245,200,0,0.44);
+      --border-green:   rgba(34,197,94,0.42);
+      --border-dim:     rgba(255,255,255,0.22);
+      --text-white:     #fffbeb;
+      --text-muted:     #d8d8b8;
+      --text-dim:       #b8b892;
+      --metal-1:        #f2f2de;
+      --metal-2:        #d8d8b8;
+      --ff-head:        'Barlow Condensed', sans-serif;
+      --ff-body:        'Inter', sans-serif;
+      --radius:         12px;
+      --shadow-yellow:  0 0 80px rgba(245,200,0,0.44);
+      --shadow-green:   0 0 80px rgba(34,197,94,0.40);
+      --shadow-card:    0 8px 28px rgba(0,0,0,0.36);
+      --transition:     all 0.3s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--ff-body);
+      background:
+        radial-gradient(ellipse 130% 55% at 50% 0%,    rgba(34,197,94,0.10)  0%, transparent 48%),
+        radial-gradient(ellipse 90%  55% at 100% 55%,  rgba(245,200,0,0.07)  0%, transparent 50%),
+        radial-gradient(ellipse 90%  55% at 0%   45%,  rgba(34,197,94,0.07)  0%, transparent 50%),
+        radial-gradient(ellipse 100% 40% at 50%  100%, rgba(245,200,0,0.06)  0%, transparent 50%),
+        linear-gradient(170deg, #272412 0%, #202010 35%, #242212 70%, #272412 100%);
+      background-attachment: fixed;
+      color: var(--text-white);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    ::selection { background: var(--green); color: #000; }
+
+    /* ============================================
+       SCROLLBAR
+    ============================================ */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg-deep); }
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, var(--yellow-dark), var(--green-dark));
+      border-radius: 3px;
+    }
+
+    /* ============================================
+       UTILITY
+    ============================================ */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section-label {
+      font-family: var(--ff-body);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .section-title {
+      font-family: var(--ff-head);
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 800;
+      line-height: 1.05;
+      color: var(--text-white);
+      margin-bottom: 16px;
+    }
+
+    .section-sub {
+      font-size: 16px;
+      color: var(--text-muted);
+      max-width: 540px;
+      line-height: 1.7;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      text-decoration: none;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--yellow);
+      color: #000;
+      box-shadow: 0 0 22px rgba(245,200,0,0.42);
+    }
+    .btn-primary:hover {
+      background: var(--yellow-glow);
+      box-shadow: 0 0 40px rgba(253,224,71,0.60);
+      transform: translateY(-2px);
+    }
+
+    .btn-green {
+      background: var(--green);
+      color: #000;
+      box-shadow: 0 0 22px rgba(34,197,94,0.38);
+    }
+    .btn-green:hover {
+      background: var(--green-glow);
+      box-shadow: 0 0 40px rgba(74,222,128,0.58);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text-white);
+      border: 1.5px solid rgba(255,255,255,0.20);
+    }
+    .btn-outline:hover {
+      border-color: var(--green);
+      color: var(--green);
+      background: rgba(34,197,94,0.07);
+      transform: translateY(-2px);
+    }
+
+    .glow-text {
+      background: linear-gradient(135deg, #fff 20%, var(--yellow-glow) 60%, var(--green-glow) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ============================================
+       NAVBAR
+    ============================================ */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      padding: 0 24px;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      background: rgba(30,28,12,0.92);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255,255,255,0.14);
+      transition: var(--transition);
+    }
+
+    nav.scrolled {
+      background: rgba(30,28,12,0.97);
+      box-shadow: 0 4px 32px rgba(0,0,0,0.40), 0 1px 0 rgba(34,197,94,0.22);
+      border-bottom-color: rgba(34,197,94,0.36);
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .nav-logo-icon {
+      width: 36px; height: 36px;
+      background: linear-gradient(135deg, var(--yellow), var(--green));
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 14px rgba(245,200,0,0.45);
+    }
+
+    .nav-logo-text {
+      font-family: var(--ff-head);
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--text-white);
+      letter-spacing: 0.5px;
+    }
+    .nav-logo-text .y { color: var(--yellow); }
+    .nav-logo-text .g { color: var(--green); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: var(--transition);
+      letter-spacing: 0.3px;
+      position: relative;
+      padding-bottom: 2px;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px; left: 0; right: 0;
+      height: 1px;
+      background: var(--green);
+      transform: scaleX(0);
+      transition: var(--transition);
+    }
+    .nav-links a:hover { color: var(--text-white); }
+    .nav-links a:hover::after { transform: scaleX(1); }
+
+    .nav-cta { display: flex; align-items: center; gap: 12px; }
+
+    .nav-phone {
+      color: var(--yellow);
+      font-weight: 700;
+      font-size: 15px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition);
+    }
+    .nav-phone:hover { color: var(--yellow-glow); }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text-white);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 68px; left: 0; right: 0;
+      background: rgba(30,28,12,0.98);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(34,197,94,0.15);
+      padding: 24px;
+      z-index: 999;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border-dim);
+      transition: var(--transition);
+    }
+    .mobile-menu a:hover { color: var(--green); }
+
+    /* ============================================
+       HERO
+    ============================================ */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: 68px;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 90% 70% at 65% 50%, rgba(34,197,94,0.22) 0%, transparent 65%),
+        radial-gradient(ellipse 55% 75% at 10% 80%, rgba(245,200,0,0.17) 0%, transparent 60%),
+        radial-gradient(ellipse 45% 55% at 80% 10%, rgba(245,200,0,0.12) 0%, transparent 60%),
+        radial-gradient(ellipse 65% 45% at 0%  50%, rgba(34,197,94,0.11) 0%, transparent 55%),
+        radial-gradient(ellipse 50% 40% at 50% 100%, rgba(34,197,94,0.08) 0%, transparent 50%),
+        linear-gradient(160deg, #242210 0%, #2a2612 50%, #242210 100%);
+    }
+
+    /* Subtle grid */
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(34,197,94,0.09) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(34,197,94,0.09) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.75) 28%, rgba(0,0,0,0.75) 72%, transparent 100%);
+    }
+
+    /* Engine cutaway — faint cinematic hero background */
+    .hero-van-bg {
+      position: absolute;
+      left: 40px;
+      right: auto;
+      bottom: -10px;
+      top: auto;
+      width: 70%;
+      max-width: 900px;
+      opacity: 0.13;
+      /* Black-bg PNG: no invert needed. Screen blend drops the black
+         background entirely; only the metallic silver parts bleed through
+         as a faint technical/diesel texture behind the headline. */
+      filter: blur(0.5px) brightness(0.80) contrast(1.1) saturate(0.55);
+      object-fit: contain;
+      object-position: left bottom;
+      pointer-events: none;
+      z-index: 1;
+      mix-blend-mode: screen;
+      /* radial vignette — soft fade at all edges, no hard cutout */
+      -webkit-mask-image: radial-gradient(
+        ellipse 88% 85% at 38% 58%,
+        black 25%,
+        rgba(0,0,0,0.70) 48%,
+        rgba(0,0,0,0.20) 65%,
+        transparent 78%
+      );
+      mask-image: radial-gradient(
+        ellipse 88% 85% at 38% 58%,
+        black 25%,
+        rgba(0,0,0,0.70) 48%,
+        rgba(0,0,0,0.20) 65%,
+        transparent 78%
+      );
+    }
+
+    /* Glow orbs */
+    .hero-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      pointer-events: none;
+    }
+    .hero-orb-1 {
+      width: 800px; height: 800px;
+      background: radial-gradient(circle, rgba(245,200,0,0.24), transparent 70%);
+      top: -140px; right: -120px;
+    }
+    .hero-orb-2 {
+      width: 800px; height: 800px;
+      background: radial-gradient(circle, rgba(34,197,94,0.26), transparent 70%);
+      bottom: -140px; left: -120px;
+    }
+    .hero-orb-3 {
+      width: 520px; height: 520px;
+      background: radial-gradient(circle, rgba(34,197,94,0.16), transparent 70%);
+      top: 20%; right: 25%;
+    }
+
+    .scan-line {
+      position: absolute;
+      left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(34,197,94,0.35), rgba(245,200,0,0.2), transparent);
+      animation: scan 7s linear infinite;
+      pointer-events: none;
+      z-index: 2;
+    }
+    @keyframes scan {
+      0%   { top: 10%; opacity: 0; }
+      10%  { opacity: 1; }
+      90%  { opacity: 1; }
+      100% { top: 90%; opacity: 0; }
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 3;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 440px;
+      gap: 56px;
+      align-items: center;
+      min-height: calc(100vh - 68px);
+      padding: 80px 0 60px;
+    }
+
+    .hero-left { display: flex; flex-direction: column; gap: 28px; }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(34,197,94,0.10);
+      border: 1px solid rgba(34,197,94,0.32);
+      border-radius: 50px;
+      padding: 6px 16px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--green);
+      width: fit-content;
+    }
+
+    .hero-badge-dot {
+      width: 6px; height: 6px;
+      background: var(--green);
+      border-radius: 50%;
+      box-shadow: 0 0 6px var(--green);
+      animation: pulse-dot 1.8s ease-in-out infinite;
+    }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 6px var(--green); }
+      50%       { opacity: 0.6; transform: scale(0.7); box-shadow: 0 0 2px var(--green); }
+    }
+
+    .hero-headline {
+      font-family: var(--ff-head);
+      font-size: clamp(40px, 6vw, 72px);
+      font-weight: 900;
+      line-height: 1.0;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-headline .line-yellow {
+      background: linear-gradient(90deg, var(--yellow), var(--yellow-glow));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      font-size: 17px;
+      color: var(--text-muted);
+      line-height: 1.75;
+      max-width: 500px;
+    }
+
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    .hero-stats {
+      display: flex;
+      gap: 32px;
+      padding-top: 8px;
+      border-top: 1px solid rgba(34,197,94,0.15);
+      flex-wrap: wrap;
+    }
+
+    .hero-stat { display: flex; flex-direction: column; gap: 2px; }
+
+    .hero-stat-num {
+      font-family: var(--ff-head);
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--text-white);
+    }
+    .hero-stat-num .y { color: var(--yellow); }
+    .hero-stat-num .g { color: var(--green); }
+
+    .hero-stat-label {
+      font-size: 11px;
+      color: var(--text-dim);
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    /* Form card */
+    .hero-form-card {
+      background: rgba(34,30,12,0.93);
+      border: 1px solid rgba(34,197,94,0.42);
+      border-radius: 16px;
+      padding: 36px 32px;
+      backdrop-filter: blur(24px);
+      box-shadow: var(--shadow-green), var(--shadow-card), inset 0 1px 0 rgba(34,197,94,0.14);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-form-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--green), var(--yellow), transparent);
+    }
+
+    .hero-form-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(34,197,94,0.3), transparent);
+    }
+
+    .form-title {
+      font-family: var(--ff-head);
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--text-white);
+      margin-bottom: 6px;
+    }
+
+    .form-sub {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+
+    .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+
+    .form-group label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--green);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      background: rgba(255,255,255,0.11);
+      border: 1px solid rgba(255,255,255,0.22);
+      border-radius: 8px;
+      padding: 12px 14px;
+      font-size: 14px;
+      color: var(--text-white);
+      font-family: var(--ff-body);
+      transition: var(--transition);
+      outline: none;
+      width: 100%;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: var(--text-dim); }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--green);
+      background: rgba(34,197,94,0.05);
+      box-shadow: 0 0 0 3px rgba(34,197,94,0.12);
+    }
+
+    .form-group textarea { resize: vertical; min-height: 80px; }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+    .btn-submit {
+      width: 100%;
+      padding: 15px;
+      background: linear-gradient(90deg, var(--green), var(--yellow));
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 0.3px;
+      cursor: pointer;
+      transition: var(--transition);
+      margin-top: 4px;
+      box-shadow: 0 0 22px rgba(34,197,94,0.38);
+      font-family: var(--ff-body);
+    }
+    .btn-submit:hover {
+      background: linear-gradient(90deg, var(--green-glow), var(--yellow-glow));
+      box-shadow: 0 0 40px rgba(74,222,128,0.55);
+      transform: translateY(-2px);
+    }
+
+    .form-disclaimer {
+      font-size: 11px;
+      color: var(--text-dim);
+      text-align: center;
+      margin-top: 12px;
+    }
+
+    /* ============================================
+       TRUST BAR
+    ============================================ */
+    #trust {
+      background: linear-gradient(90deg, #242212 0%, #2c2814 50%, #242212 100%);
+      border-top: 1px solid rgba(34,197,94,0.34);
+      border-bottom: 1px solid rgba(34,197,94,0.34);
+      padding: 20px 0;
+    }
+
+    .trust-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: var(--transition);
+      flex: 1;
+      min-width: 180px;
+      justify-content: center;
+    }
+    .trust-item:nth-child(odd):hover  { background: rgba(245,200,0,0.06); }
+    .trust-item:nth-child(even):hover { background: rgba(34,197,94,0.06); }
+
+    .trust-icon {
+      width: 40px; height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* Alternate yellow/green trust icons */
+    .trust-item:nth-child(1) .trust-icon {
+      background: rgba(245,200,0,0.10);
+      border: 1px solid rgba(245,200,0,0.28);
+    }
+    .trust-item:nth-child(1) .trust-icon svg { color: var(--yellow); }
+
+    .trust-item:nth-child(3) .trust-icon {
+      background: rgba(34,197,94,0.10);
+      border: 1px solid rgba(34,197,94,0.28);
+    }
+    .trust-item:nth-child(3) .trust-icon svg { color: var(--green); }
+
+    .trust-item:nth-child(5) .trust-icon {
+      background: rgba(245,200,0,0.10);
+      border: 1px solid rgba(245,200,0,0.28);
+    }
+    .trust-item:nth-child(5) .trust-icon svg { color: var(--yellow); }
+
+    .trust-item:nth-child(7) .trust-icon {
+      background: rgba(34,197,94,0.10);
+      border: 1px solid rgba(34,197,94,0.28);
+    }
+    .trust-item:nth-child(7) .trust-icon svg { color: var(--green); }
+
+    .trust-icon svg { width: 20px; height: 20px; }
+
+    .trust-text { display: flex; flex-direction: column; }
+
+    .trust-val {
+      font-family: var(--ff-head);
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--text-white);
+      line-height: 1.1;
+    }
+
+    .trust-label {
+      font-size: 11px;
+      color: var(--text-dim);
+      font-weight: 500;
+      letter-spacing: 0.3px;
+    }
+
+    .trust-divider {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(180deg, rgba(245,200,0,0.2), rgba(34,197,94,0.2));
+    }
+
+    /* ============================================
+       SERVICES
+    ============================================ */
+    #services {
+      padding: 100px 0;
+      position: relative;
+    }
+
+    /* Dual-color top line */
+    #services::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 1px;
+      height: 80px;
+      background: linear-gradient(180deg, transparent, var(--green));
+    }
+
+    .services-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .services-header .section-sub { margin: 0 auto; }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .service-card {
+      background: var(--bg-glass);
+      border: 1px solid var(--border-dim);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      position: relative;
+      overflow: hidden;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    /* Alternate yellow/green per card */
+    .service-card:nth-child(odd)::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--green), transparent);
+      transform: scaleX(0);
+      transition: var(--transition);
+    }
+    .service-card:nth-child(even)::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--yellow), transparent);
+      transform: scaleX(0);
+      transition: var(--transition);
+    }
+
+    .service-card:nth-child(odd):hover {
+      border-color: rgba(34,197,94,0.35);
+      box-shadow: var(--shadow-green), var(--shadow-card);
+    }
+    .service-card:nth-child(even):hover {
+      border-color: rgba(245,200,0,0.35);
+      box-shadow: var(--shadow-yellow), var(--shadow-card);
+    }
+    .service-card:hover { transform: translateY(-6px); }
+    .service-card:hover::after { transform: scaleX(1); }
+
+    .service-icon {
+      width: 52px; height: 52px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      transition: var(--transition);
+    }
+    .service-card:nth-child(odd) .service-icon {
+      background: rgba(34,197,94,0.10);
+      border: 1px solid rgba(34,197,94,0.25);
+    }
+    .service-card:nth-child(odd) .service-icon svg { color: var(--green); }
+    .service-card:nth-child(even) .service-icon {
+      background: rgba(245,200,0,0.10);
+      border: 1px solid rgba(245,200,0,0.25);
+    }
+    .service-card:nth-child(even) .service-icon svg { color: var(--yellow); }
+
+    .service-card:nth-child(odd):hover .service-icon {
+      background: rgba(34,197,94,0.20);
+      box-shadow: 0 0 20px rgba(34,197,94,0.28);
+    }
+    .service-card:nth-child(even):hover .service-icon {
+      background: rgba(245,200,0,0.18);
+      box-shadow: 0 0 20px rgba(245,200,0,0.28);
+    }
+    .service-icon svg { width: 26px; height: 26px; }
+
+    .service-name {
+      font-family: var(--ff-head);
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--text-white);
+      margin-bottom: 10px;
+      letter-spacing: 0.3px;
+    }
+
+    .service-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    .service-arrow {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      opacity: 0;
+      transform: translateX(-8px);
+      transition: var(--transition);
+    }
+    .service-card:nth-child(odd) .service-arrow { color: var(--green); }
+    .service-card:nth-child(even) .service-arrow { color: var(--yellow); }
+    .service-card:hover .service-arrow { opacity: 1; transform: translateX(0); }
+
+    /* ============================================
+       SERVICE MODAL
+    ============================================ */
+    .svc-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.72);
+      backdrop-filter: blur(6px);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+    .svc-modal-overlay.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .svc-modal {
+      background: #282412;
+      border: 1px solid rgba(34,197,94,0.48);
+      border-radius: 16px;
+      padding: 40px 36px 32px;
+      max-width: 560px;
+      width: 100%;
+      position: relative;
+      box-shadow: 0 0 70px rgba(34,197,94,0.20), 0 24px 64px rgba(0,0,0,0.65);
+      transform: translateY(20px);
+      transition: transform 0.28s cubic-bezier(0.4,0,0.2,1);
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    .svc-modal-overlay.open .svc-modal {
+      transform: translateY(0);
+    }
+
+    /* top accent line */
+    .svc-modal::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      border-radius: 16px 16px 0 0;
+      background: linear-gradient(90deg, transparent, var(--green), var(--yellow), transparent);
+    }
+
+    .svc-modal-close {
+      position: absolute;
+      top: 16px; right: 16px;
+      width: 32px; height: 32px;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.10);
+      color: var(--text-muted);
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      transition: var(--transition);
+      flex-shrink: 0;
+    }
+    .svc-modal-close:hover {
+      background: rgba(34,197,94,0.12);
+      border-color: rgba(34,197,94,0.35);
+      color: var(--green);
+    }
+    .svc-modal-close svg { width: 16px; height: 16px; }
+
+    .svc-modal-icon {
+      width: 56px; height: 56px;
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 20px;
+      background: rgba(34,197,94,0.10);
+      border: 1px solid rgba(34,197,94,0.28);
+    }
+    .svc-modal-icon svg { width: 28px; height: 28px; color: var(--green); }
+
+    .svc-modal-title {
+      font-family: var(--ff-head);
+      font-size: 30px;
+      font-weight: 900;
+      color: var(--text-white);
+      margin-bottom: 10px;
+      letter-spacing: 0.3px;
+    }
+
+    .svc-modal-tagline {
+      font-size: 14px;
+      color: var(--green);
+      font-weight: 600;
+      margin-bottom: 20px;
+      letter-spacing: 0.3px;
+    }
+
+    .svc-modal-desc {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 24px;
+    }
+
+    .svc-modal-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+    .svc-modal-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--metal-1);
+      line-height: 1.5;
+    }
+    .svc-modal-list li::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    .svc-modal-divider {
+      height: 1px;
+      background: rgba(255,255,255,0.07);
+      margin-bottom: 24px;
+    }
+
+    .svc-modal-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .svc-modal-phone {
+      font-size: 14px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    .svc-modal-phone:hover { color: var(--yellow); }
+    .svc-modal-phone svg { width: 14px; height: 14px; color: var(--yellow); }
+
+    .btn-book-now {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 28px;
+      background: var(--green);
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: var(--transition);
+      font-family: var(--ff-body);
+      box-shadow: 0 0 20px rgba(34,197,94,0.35);
+      text-decoration: none;
+    }
+    .btn-book-now:hover {
+      background: var(--green-glow);
+      box-shadow: 0 0 36px rgba(74,222,128,0.55);
+      transform: translateY(-2px);
+    }
+
+    /* ============================================
+       REVIEWS
+    ============================================ */
+    #reviews {
+      padding: 100px 0;
+      background: var(--bg-dark);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #reviews::before {
+      content: '';
+      position: absolute;
+      top: -200px; right: -200px;
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(34,197,94,0.10) 0%, transparent 70%);
+    }
+    #reviews::after {
+      content: '';
+      position: absolute;
+      bottom: -150px; left: -150px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(245,200,0,0.08) 0%, transparent 70%);
+    }
+
+    .reviews-header { text-align: center; margin-bottom: 56px; }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .review-card {
+      background: rgba(38,34,14,0.92);
+      border: 1px solid var(--border-dim);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      backdrop-filter: blur(16px);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .review-card::before {
+      content: '"';
+      position: absolute;
+      top: -10px; right: 20px;
+      font-size: 120px;
+      font-family: Georgia, serif;
+      color: rgba(34,197,94,0.11);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .review-card:nth-child(odd):hover {
+      border-color: rgba(34,197,94,0.30);
+      box-shadow: var(--shadow-green), var(--shadow-card);
+    }
+    .review-card:nth-child(even):hover {
+      border-color: rgba(245,200,0,0.28);
+      box-shadow: var(--shadow-yellow), var(--shadow-card);
+    }
+    .review-card:hover { transform: translateY(-5px); }
+
+    /* Top accent line per card */
+    .review-card::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      opacity: 0;
+      transition: var(--transition);
+    }
+    .review-card:nth-child(odd)::after {
+      background: linear-gradient(90deg, transparent, var(--green), transparent);
+    }
+    .review-card:nth-child(even)::after {
+      background: linear-gradient(90deg, transparent, var(--yellow), transparent);
+    }
+    .review-card:hover::after { opacity: 1; }
+
+    .stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 18px;
+    }
+    .stars svg { width: 18px; height: 18px; fill: var(--yellow); }
+
+    .review-text {
+      font-size: 15px;
+      color: var(--metal-1);
+      line-height: 1.75;
+      margin-bottom: 22px;
+      font-style: italic;
+    }
+
+    .review-author { display: flex; align-items: center; gap: 12px; }
+
+    .review-avatar {
+      width: 42px; height: 42px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--ff-head);
+      font-size: 16px;
+      font-weight: 800;
+      color: #000;
+      flex-shrink: 0;
+    }
+    .review-card:nth-child(odd) .review-avatar {
+      background: linear-gradient(135deg, var(--green-dark), var(--green));
+    }
+    .review-card:nth-child(even) .review-avatar {
+      background: linear-gradient(135deg, var(--yellow-dark), var(--yellow));
+    }
+
+    .review-name { font-weight: 700; font-size: 14px; color: var(--text-white); }
+
+    .review-source {
+      font-size: 12px;
+      color: var(--text-dim);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .google-dot {
+      width: 8px; height: 8px;
+      background: #4285F4;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    /* ============================================
+       WHY US
+    ============================================ */
+    #why {
+      padding: 100px 0;
+      position: relative;
+    }
+
+    #why::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 1px;
+      height: 80px;
+      background: linear-gradient(180deg, transparent, var(--yellow));
+    }
+
+    .why-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .why-left { display: flex; flex-direction: column; gap: 12px; }
+
+    .why-features { display: flex; flex-direction: column; gap: 16px; margin-top: 12px; }
+
+    .why-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px 22px;
+      background: var(--bg-glass);
+      border: 1px solid var(--border-dim);
+      border-radius: 10px;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .why-feature::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 2px;
+      opacity: 0;
+      transition: var(--transition);
+    }
+    .why-feature:nth-child(odd)::before { background: var(--green); }
+    .why-feature:nth-child(even)::before { background: var(--yellow); }
+
+    .why-feature:nth-child(odd):hover {
+      border-color: rgba(34,197,94,0.28);
+      background: rgba(34,197,94,0.04);
+      transform: translateX(6px);
+    }
+    .why-feature:nth-child(even):hover {
+      border-color: rgba(245,200,0,0.28);
+      background: rgba(245,200,0,0.03);
+      transform: translateX(6px);
+    }
+    .why-feature:hover::before { opacity: 1; }
+
+    .why-feature-icon {
+      width: 44px; height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .why-feature:nth-child(odd) .why-feature-icon {
+      background: rgba(34,197,94,0.10);
+      border: 1px solid rgba(34,197,94,0.22);
+    }
+    .why-feature:nth-child(odd) .why-feature-icon svg { color: var(--green); }
+    .why-feature:nth-child(even) .why-feature-icon {
+      background: rgba(245,200,0,0.10);
+      border: 1px solid rgba(245,200,0,0.22);
+    }
+    .why-feature:nth-child(even) .why-feature-icon svg { color: var(--yellow); }
+    .why-feature-icon svg { width: 22px; height: 22px; }
+
+    .why-feature-text { display: flex; flex-direction: column; gap: 4px; }
+
+    .why-feature-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-white);
+    }
+
+    .why-feature-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Right — real van photo */
+    .why-right { display: flex; align-items: center; justify-content: center; }
+
+    .why-visual {
+      position: relative;
+      width: 100%;
+      max-width: 440px;
+    }
+
+    .why-van-photo-wrap {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(34,197,94,0.18);
+      box-shadow: var(--shadow-green), var(--shadow-card);
+    }
+
+    .why-van-photo-wrap::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(135deg, rgba(34,197,94,0.12) 0%, transparent 50%),
+        linear-gradient(to top, rgba(4,4,0,0.80) 0%, transparent 50%);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    /* Top accent line */
+    .why-van-photo-wrap::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--green), var(--yellow), transparent);
+      z-index: 2;
+    }
+
+    .why-van-photo {
+      width: 100%;
+      display: block;
+      opacity: 0.82;
+      filter: brightness(0.92) saturate(0.78) contrast(1.05);
+      object-fit: cover;
+      min-height: 260px;
+    }
+
+    /* Label over photo */
+    .why-van-label {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 18px 20px;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .why-van-label-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(34,197,94,0.15);
+      border: 1px solid rgba(34,197,94,0.35);
+      border-radius: 50px;
+      padding: 5px 12px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--green);
+    }
+
+    .why-badge-float {
+      position: absolute;
+      background: rgba(36,32,12,0.97);
+      border-radius: 10px;
+      padding: 14px 18px;
+      backdrop-filter: blur(16px);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: var(--shadow-card);
+      animation: float 4s ease-in-out infinite;
+      z-index: 4;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-10px); }
+    }
+
+    .why-badge-float-1 {
+      top: -18px; left: -24px;
+      border: 1px solid rgba(245,200,0,0.38);
+      animation-delay: 0s;
+      box-shadow: 0 0 20px rgba(245,200,0,0.10), 0 8px 24px rgba(0,0,0,0.45);
+    }
+    .why-badge-float-2 {
+      bottom: 60px; right: -20px;
+      border: 1px solid rgba(34,197,94,0.38);
+      animation-delay: 2s;
+      box-shadow: 0 0 20px rgba(34,197,94,0.12), 0 8px 24px rgba(0,0,0,0.45);
+    }
+
+    .float-icon {
+      width: 36px; height: 36px;
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .why-badge-float-1 .float-icon { background: rgba(245,200,0,0.12); }
+    .why-badge-float-1 .float-icon svg { color: var(--yellow); }
+    .why-badge-float-2 .float-icon { background: rgba(34,197,94,0.12); }
+    .why-badge-float-2 .float-icon svg { color: var(--green); }
+    .float-icon svg { width: 18px; height: 18px; }
+    .float-label { font-size: 13px; font-weight: 700; color: var(--text-white); }
+    .float-sub   { font-size: 11px; color: var(--text-dim); }
+
+    /* ============================================
+       CONTACT
+    ============================================ */
+    #contact {
+      padding: 100px 0;
+      background: var(--bg-dark);
+      position: relative;
+    }
+
+    #contact::before {
+      content: '';
+      position: absolute;
+      top: -150px; left: 50%;
+      transform: translateX(-50%);
+      width: 700px; height: 380px;
+      background: radial-gradient(ellipse, rgba(34,197,94,0.09) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .contact-header { text-align: center; margin-bottom: 56px; }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .contact-info { display: flex; flex-direction: column; gap: 20px; }
+
+    .contact-card {
+      background: rgba(38,34,14,0.90);
+      border: 1px solid var(--border-dim);
+      border: 1px solid var(--border-dim);
+      border-radius: var(--radius);
+      padding: 24px 26px;
+      backdrop-filter: blur(16px);
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-card::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 2px;
+      opacity: 0;
+      transition: var(--transition);
+    }
+    .contact-card:nth-child(1)::before { background: var(--green); }
+    .contact-card:nth-child(2)::before { background: var(--yellow); }
+    .contact-card:nth-child(3)::before { background: var(--green); }
+
+    .contact-card:hover::before { opacity: 1; }
+
+    .contact-card:nth-child(odd):hover {
+      border-color: rgba(34,197,94,0.28);
+      box-shadow: 0 0 22px rgba(34,197,94,0.10);
+    }
+    .contact-card:nth-child(even):hover {
+      border-color: rgba(245,200,0,0.28);
+      box-shadow: 0 0 22px rgba(245,200,0,0.10);
+    }
+
+    .contact-card-icon {
+      width: 46px; height: 46px;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .contact-card:nth-child(1) .contact-card-icon {
+      background: rgba(34,197,94,0.10);
+      border: 1px solid rgba(34,197,94,0.22);
+    }
+    .contact-card:nth-child(1) .contact-card-icon svg { color: var(--green); }
+    .contact-card:nth-child(2) .contact-card-icon {
+      background: rgba(245,200,0,0.10);
+      border: 1px solid rgba(245,200,0,0.22);
+    }
+    .contact-card:nth-child(2) .contact-card-icon svg { color: var(--yellow); }
+    .contact-card:nth-child(3) .contact-card-icon {
+      background: rgba(34,197,94,0.10);
+      border: 1px solid rgba(34,197,94,0.22);
+    }
+    .contact-card:nth-child(3) .contact-card-icon svg { color: var(--green); }
+    .contact-card-icon svg { width: 22px; height: 22px; }
+
+    .contact-card-body { display: flex; flex-direction: column; gap: 3px; }
+
+    .contact-card-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-dim);
+    }
+
+    .contact-card-val {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-white);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    a.contact-card-val:hover { color: var(--green); }
+
+    .contact-card-sub { font-size: 13px; color: var(--text-muted); }
+
+    .hours-list { display: flex; flex-direction: column; gap: 6px; margin-top: 4px; }
+    .hours-row  { display: flex; justify-content: space-between; font-size: 13px; }
+    .hours-day  { color: var(--text-muted); }
+    .hours-time { color: var(--text-white); font-weight: 500; }
+
+    /* Map */
+    .map-placeholder {
+      background: rgba(38,34,14,0.90);
+      border: 1px solid rgba(34,197,94,0.38);
+      border-radius: var(--radius);
+      overflow: hidden;
+      height: 100%;
+      min-height: 360px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .map-header {
+      padding: 16px 20px;
+      border-bottom: 1px solid rgba(34,197,94,0.12);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .map-dot {
+      width: 8px; height: 8px;
+      background: var(--green);
+      border-radius: 50%;
+      box-shadow: 0 0 6px var(--green);
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+
+    .map-embed { flex: 1; }
+    .map-embed iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 300px;
+      border: 0;
+      filter: invert(0.88) hue-rotate(180deg) saturate(0.5) brightness(0.82);
+    }
+
+    /* ============================================
+       FINAL CTA
+    ============================================ */
+    #final-cta {
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    /* Real van photo as faint CTA background */
+    .final-cta-van {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.055;
+      filter: blur(2px) brightness(1.1) saturate(0.4) grayscale(0.3);
+      mix-blend-mode: screen;
+      pointer-events: none;
+    }
+
+    #final-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 70% at 50% 50%, rgba(34,197,94,0.14) 0%, transparent 65%),
+        radial-gradient(ellipse 40% 40% at 20% 80%, rgba(245,200,0,0.10) 0%, transparent 60%),
+        radial-gradient(ellipse 30% 50% at 80% 20%, rgba(245,200,0,0.07) 0%, transparent 60%),
+        linear-gradient(160deg, #0c0b04 0%, #111008 50%, #0c0b04 100%);
+      z-index: 1;
+    }
+
+    .final-cta-inner {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .final-cta-title {
+      font-family: var(--ff-head);
+      font-size: clamp(36px, 6vw, 64px);
+      font-weight: 900;
+      line-height: 1.05;
+      max-width: 700px;
+    }
+
+    .final-cta-sub {
+      font-size: 17px;
+      color: var(--text-muted);
+      max-width: 480px;
+      line-height: 1.7;
+    }
+
+    .final-cta-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 8px;
+    }
+
+    .btn-lg {
+      padding: 18px 38px;
+      font-size: 17px;
+      border-radius: 10px;
+    }
+
+    /* ============================================
+       FOOTER
+    ============================================ */
+    footer {
+      background: #1e1c0e;
+      border-top: 1px solid rgba(34,197,94,0.34);
+      padding: 40px 0 28px;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .footer-logo-icon {
+      width: 32px; height: 32px;
+      background: linear-gradient(135deg, var(--yellow), var(--green));
+      border-radius: 7px;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    .footer-logo-text {
+      font-family: var(--ff-head);
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--text-white);
+    }
+    .footer-logo-text .y { color: var(--yellow); }
+    .footer-logo-text .g { color: var(--green); }
+
+    .footer-links { display: flex; gap: 24px; list-style: none; flex-wrap: wrap; }
+    .footer-links a {
+      font-size: 13px;
+      color: var(--text-dim);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    .footer-links a:hover { color: var(--green); }
+
+    .footer-copy { font-size: 12px; color: var(--text-dim); }
+
+    /* ============================================
+       FLOATING CALL BUTTON (mobile)
+    ============================================ */
+    .fab-call {
+      display: none;
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 900;
+      background: linear-gradient(90deg, var(--green), var(--yellow));
+      color: #000;
+      border-radius: 50px;
+      padding: 14px 24px;
+      font-size: 15px;
+      font-weight: 800;
+      text-decoration: none;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 0 30px rgba(34,197,94,0.50);
+      animation: fab-pulse 2.5s ease-in-out infinite;
+    }
+    @keyframes fab-pulse {
+      0%, 100% { box-shadow: 0 0 20px rgba(34,197,94,0.40); }
+      50%       { box-shadow: 0 0 42px rgba(74,222,128,0.65); }
+    }
+    .fab-call svg { width: 18px; height: 18px; }
+
+    /* ============================================
+       ANIMATIONS
+    ============================================ */
+    [data-aos] {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    [data-aos].aos-animate { opacity: 1; transform: translateY(0); }
+    [data-aos="fade-left"]  { transform: translateX(-24px); }
+    [data-aos="fade-left"].aos-animate  { transform: translateX(0); }
+    [data-aos="fade-right"] { transform: translateX(24px); }
+    [data-aos="fade-right"].aos-animate { transform: translateX(0); }
+
+    /* ============================================
+       RESPONSIVE
+    ============================================ */
+    @media (max-width: 1024px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 40px; padding-top: 60px; }
+      .hero-van-bg {
+        width: 100%;
+        max-width: 100%;
+        left: -20px;
+        right: auto;
+        bottom: 0;
+        opacity: 0.06;
+        -webkit-mask-image: radial-gradient(ellipse 90% 70% at 40% 60%, black 20%, rgba(0,0,0,0.4) 50%, transparent 72%);
+        mask-image: radial-gradient(ellipse 90% 70% at 40% 60%, black 20%, rgba(0,0,0,0.4) 50%, transparent 72%);
+      }
+      .hero-form-card { max-width: 540px; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+      .why-inner { grid-template-columns: 1fr; gap: 48px; }
+      .why-right { display: none; }
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links, .nav-phone { display: none; }
+      .hamburger { display: flex; }
+      .trust-divider { display: none; }
+      .trust-item { min-width: calc(50% - 16px); }
+      .services-grid { grid-template-columns: 1fr; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-inner { flex-direction: column; align-items: flex-start; gap: 20px; }
+      .fab-call { display: flex; }
+      .hero-stats { gap: 20px; }
+      .final-cta-actions .btn-lg { width: 100%; justify-content: center; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-actions { flex-direction: column; }
+      .hero-actions .btn { width: 100%; justify-content: center; }
+      .trust-item { min-width: 100%; }
+      .why-badge-float { display: none; }
+    }
+
+    /* ============================================
+       PREMIUM POLISH — ATMOSPHERE PASS 3
+    ============================================ */
+
+    /* Services — strong green spotlight from top + gold side */
+    #services {
+      background:
+        radial-gradient(ellipse 80% 55% at 50% -10%, rgba(34,197,94,0.20) 0%, transparent 55%),
+        radial-gradient(ellipse 45% 65% at 100% 50%, rgba(245,200,0,0.09) 0%, transparent 55%),
+        radial-gradient(ellipse 45% 65% at 0%   50%, rgba(34,197,94,0.07) 0%, transparent 55%),
+        transparent;
+    }
+
+    /* Why Us — green right spotlight + gold left accent */
+    #why {
+      background:
+        radial-gradient(ellipse 65% 75% at 100% 50%, rgba(34,197,94,0.16) 0%, transparent 60%),
+        radial-gradient(ellipse 45% 45% at 0%   65%, rgba(245,200,0,0.09) 0%, transparent 55%),
+        transparent;
+    }
+
+    /* Reviews — warm lifted gradient + dual corner glows */
+    #reviews {
+      background:
+        radial-gradient(ellipse 90% 60% at 50%  0%,   rgba(34,197,94,0.13) 0%, transparent 55%),
+        radial-gradient(ellipse 60% 50% at 100% 100%, rgba(245,200,0,0.08) 0%, transparent 55%),
+        radial-gradient(ellipse 60% 50% at 0%   100%, rgba(34,197,94,0.06) 0%, transparent 55%),
+        linear-gradient(180deg, #292610 0%, #252212 50%, #292610 100%);
+    }
+
+    /* Contact — warm lifted gradient + top green glow */
+    #contact {
+      background:
+        radial-gradient(ellipse 80% 55% at 50% 0%,   rgba(34,197,94,0.12) 0%, transparent 55%),
+        radial-gradient(ellipse 50% 50% at 100% 80%, rgba(245,200,0,0.07) 0%, transparent 50%),
+        linear-gradient(180deg, #292610 0%, #252212 50%, #292610 100%);
+    }
+
+    /* Final CTA — vivid dual-color spotlight */
+    #final-cta::before {
+      background:
+        radial-gradient(ellipse 75% 75% at 50% 50%, rgba(34,197,94,0.22) 0%, transparent 65%),
+        radial-gradient(ellipse 45% 45% at 15% 80%, rgba(245,200,0,0.16) 0%, transparent 60%),
+        radial-gradient(ellipse 35% 55% at 85% 20%, rgba(245,200,0,0.11) 0%, transparent 60%),
+        linear-gradient(160deg, #242212 0%, #2a2614 50%, #242212 100%);
+    }
+
+    /* Service cards — warm glass surface + colored shimmer top */
+    .service-card {
+      background: rgba(255,255,255,0.09);
+    }
+    .service-card:nth-child(odd) {
+      border-color: rgba(34,197,94,0.20);
+      box-shadow: 0 4px 32px rgba(0,0,0,0.28), inset 0 1px 0 rgba(34,197,94,0.20);
+    }
+    .service-card:nth-child(even) {
+      border-color: rgba(245,200,0,0.18);
+      box-shadow: 0 4px 32px rgba(0,0,0,0.28), inset 0 1px 0 rgba(245,200,0,0.18);
+    }
+
+    /* Service icons — vivid glowing boxes */
+    .service-card:nth-child(odd) .service-icon {
+      background: rgba(34,197,94,0.22);
+      border-color: rgba(34,197,94,0.48);
+      box-shadow: 0 0 18px rgba(34,197,94,0.22);
+    }
+    .service-card:nth-child(even) .service-icon {
+      background: rgba(245,200,0,0.20);
+      border-color: rgba(245,200,0,0.48);
+      box-shadow: 0 0 18px rgba(245,200,0,0.20);
+    }
+
+    /* Review cards — warm lifted surface + top shimmer */
+    .review-card:nth-child(odd) {
+      border-color: rgba(34,197,94,0.18);
+      box-shadow: 0 4px 28px rgba(0,0,0,0.24), inset 0 1px 0 rgba(34,197,94,0.16);
+    }
+    .review-card:nth-child(even) {
+      border-color: rgba(245,200,0,0.16);
+      box-shadow: 0 4px 28px rgba(0,0,0,0.24), inset 0 1px 0 rgba(245,200,0,0.14);
+    }
+    .review-card::before { color: rgba(34,197,94,0.18); }
+
+    /* Why feature cards — elevated warm glass */
+    .why-feature {
+      background: rgba(255,255,255,0.09);
+      border-color: rgba(255,255,255,0.18);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.22), inset 0 1px 0 rgba(255,255,255,0.08);
+    }
+    .why-feature:nth-child(odd) .why-feature-icon {
+      background: rgba(34,197,94,0.24);
+      border-color: rgba(34,197,94,0.50);
+      box-shadow: 0 0 20px rgba(34,197,94,0.24);
+    }
+    .why-feature:nth-child(even) .why-feature-icon {
+      background: rgba(245,200,0,0.22);
+      border-color: rgba(245,200,0,0.50);
+      box-shadow: 0 0 20px rgba(245,200,0,0.20);
+    }
+
+    /* Why van photo — vivid border presence */
+    .why-van-photo-wrap {
+      border-color: rgba(34,197,94,0.44);
+      box-shadow: 0 0 100px rgba(34,197,94,0.32), 0 20px 56px rgba(0,0,0,0.40);
+    }
+
+    /* Floating badges */
+    .why-badge-float-1 {
+      border-color: rgba(245,200,0,0.55);
+      box-shadow: 0 0 32px rgba(245,200,0,0.18), 0 8px 32px rgba(0,0,0,0.40);
+    }
+    .why-badge-float-2 {
+      border-color: rgba(34,197,94,0.55);
+      box-shadow: 0 0 32px rgba(34,197,94,0.20), 0 8px 32px rgba(0,0,0,0.40);
+    }
+
+    /* Contact cards */
+    .contact-card {
+      box-shadow: 0 4px 24px rgba(0,0,0,0.22), inset 0 1px 0 rgba(255,255,255,0.06);
+    }
+    .contact-card:nth-child(1) .contact-card-icon,
+    .contact-card:nth-child(3) .contact-card-icon {
+      background: rgba(34,197,94,0.24);
+      border-color: rgba(34,197,94,0.50);
+      box-shadow: 0 0 18px rgba(34,197,94,0.22);
+    }
+    .contact-card:nth-child(2) .contact-card-icon {
+      background: rgba(245,200,0,0.22);
+      border-color: rgba(245,200,0,0.50);
+      box-shadow: 0 0 18px rgba(245,200,0,0.20);
+    }
+
+    /* Map */
+    .map-header { border-bottom-color: rgba(34,197,94,0.24); }
+
+    /* Trust icons */
+    .trust-item:nth-child(1) .trust-icon,
+    .trust-item:nth-child(5) .trust-icon {
+      background: rgba(245,200,0,0.22);
+      border-color: rgba(245,200,0,0.52);
+      box-shadow: 0 0 16px rgba(245,200,0,0.20);
+    }
+    .trust-item:nth-child(3) .trust-icon,
+    .trust-item:nth-child(7) .trust-icon {
+      background: rgba(34,197,94,0.22);
+      border-color: rgba(34,197,94,0.52);
+      box-shadow: 0 0 16px rgba(34,197,94,0.20);
+    }
+
+    /* Nav logo */
+    .nav-logo-icon {
+      box-shadow: 0 0 28px rgba(245,200,0,0.70), 0 0 12px rgba(34,197,94,0.40);
+    }
+
+    /* All buttons */
+    .btn-submit   { box-shadow: 0 0 36px rgba(34,197,94,0.58); }
+    .btn-primary  { box-shadow: 0 0 34px rgba(245,200,0,0.60); }
+    .btn-green    { box-shadow: 0 0 34px rgba(34,197,94,0.56); }
+    .btn-book-now { box-shadow: 0 0 32px rgba(34,197,94,0.54); }
+    .fab-call     { box-shadow: 0 0 44px rgba(34,197,94,0.70); }
+
+    /* Scan line */
+    .scan-line {
+      background: linear-gradient(90deg, transparent, rgba(34,197,94,0.65), rgba(245,200,0,0.42), transparent);
+    }
+
+    /* Hero badge */
+    .hero-badge {
+      background: rgba(34,197,94,0.22);
+      border-color: rgba(34,197,94,0.58);
+      box-shadow: 0 0 20px rgba(34,197,94,0.22);
+    }
+
+    /* Hero stats */
+    .hero-stats { border-top-color: rgba(34,197,94,0.36); }
+
+    /* Section accent lines */
+    #services::before { background: linear-gradient(180deg, transparent, rgba(34,197,94,0.65)); }
+    #why::before      { background: linear-gradient(180deg, transparent, rgba(245,200,0,0.65)); }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, var(--yellow), var(--green));
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ============================================
+       NAVBAR
+  ============================================ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <div class="nav-logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+            <rect x="1" y="8" width="22" height="10" rx="2"/><path d="M5 8V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v2"/>
+            <circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/>
+          </svg>
+        </div>
+        <span class="nav-logo-text">Sprinter Van <span class="y">City</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <a href="tel:7724612114" class="nav-phone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.36 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.54A16 16 0 0 0 15.46 16.09l.92-.83a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          (772) 461-2114
+        </a>
+        <a href="#hero-form" class="btn btn-green" style="padding:10px 20px;font-size:13px;">Schedule Service</a>
+      </div>
+
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#services" onclick="toggleMenu()">Services</a>
+    <a href="#reviews" onclick="toggleMenu()">Reviews</a>
+    <a href="#why" onclick="toggleMenu()">Why Us</a>
+    <a href="#contact" onclick="toggleMenu()">Contact</a>
+    <a href="tel:7724612114" style="color:var(--yellow);font-weight:700;">📞 (772) 461-2114</a>
+  </div>
+
+  <!-- ============================================
+       HERO
+  ============================================ -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="scan-line"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
+
+    <!-- Engine cutaway — cinematic faint hero background -->
+    <img
+      class="hero-van-bg"
+      src="engine-bg.png"
+      alt=""
+      aria-hidden="true"
+    />
+
+    <div class="container">
+      <div class="hero-inner">
+
+        <!-- Left -->
+        <div class="hero-left">
+          <div class="hero-badge">
+            <span class="hero-badge-dot"></span>
+            Fort Pierce, FL · Sprinter Specialists
+          </div>
+
+          <h1 class="hero-headline">
+            Fixed in<br>
+            <span class="line-yellow">Days, Not Weeks</span>
+          </h1>
+
+          <p class="hero-sub">
+            Sprinter Van City helps keep your van on the road with fast, effective repairs, clear communication, and service you can trust.
+          </p>
+
+          <div class="hero-actions">
+            <a href="tel:7724612114" class="btn btn-primary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="18" height="18">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.36 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.54A16 16 0 0 0 15.46 16.09l.92-.83a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              Call Now
+            </a>
+            <a href="#hero-form" class="btn btn-outline">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+              Schedule Service
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <div class="hero-stat-num">4.1<span class="y">★</span></div>
+              <div class="hero-stat-label">Google Rating</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-num">39<span class="g">+</span></div>
+              <div class="hero-stat-label">Verified Reviews</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-num">100<span class="g">%</span></div>
+              <div class="hero-stat-label">Sprinter Focused</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: form -->
+        <div class="hero-form-card" id="hero-form">
+          <p class="form-title">Request Service</p>
+          <p class="form-sub">Fill out the form and we'll get back to you fast.</p>
+
+          <form onsubmit="handleFormSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">First Name</label>
+                <input id="fname" type="text" placeholder="John" required />
+              </div>
+              <div class="form-group">
+                <label for="flname">Last Name</label>
+                <input id="flname" type="text" placeholder="Smith" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="fphone">Phone Number</label>
+              <input id="fphone" type="tel" placeholder="772-000-0000" maxlength="12" required />
+            </div>
+            <div class="form-group">
+              <label for="fissue">Vehicle Issue</label>
+              <textarea id="fissue" placeholder="Describe what's going on with your van…" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="fdate">Preferred Date</label>
+              <input id="fdate" type="date" required />
+            </div>
+            <button type="submit" class="btn-submit">Request Service →</button>
+          </form>
+
+          <p class="form-disclaimer">We respect your privacy. No spam, ever.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       TRUST BAR
+  ============================================ -->
+  <section id="trust">
+    <div class="container">
+      <div class="trust-inner">
+
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+          </div>
+          <div class="trust-text">
+            <span class="trust-val">4.1 Stars</span>
+            <span class="trust-label">Google Rating</span>
+          </div>
+        </div>
+
+        <div class="trust-divider"></div>
+
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <div class="trust-text">
+            <span class="trust-val">39 Reviews</span>
+            <span class="trust-label">Verified Google Reviews</span>
+          </div>
+        </div>
+
+        <div class="trust-divider"></div>
+
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <div class="trust-text">
+            <span class="trust-val">Specialists</span>
+            <span class="trust-label">Sprinter Van Focused</span>
+          </div>
+        </div>
+
+        <div class="trust-divider"></div>
+
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <div class="trust-text">
+            <span class="trust-val">Fort Pierce</span>
+            <span class="trust-label">Fort Pierce, FL</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SERVICES
+  ============================================ -->
+  <section id="services">
+    <div class="container">
+      <div class="services-header">
+        <span class="section-label">What We Fix</span>
+        <h2 class="section-title">Comprehensive Sprinter<br>Van Services</h2>
+        <p class="section-sub">From diagnostics to drivetrain, we handle every aspect of your Sprinter van with expert-level precision.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card" data-aos data-service="diagnostics" onclick="openServiceModal('diagnostics')">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <div class="service-name">Diagnostics</div>
+          <p class="service-desc">Advanced computerized diagnostics to pinpoint issues fast, so you spend less time in the shop and more time on the road.</p>
+          <div class="service-arrow">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+        </div>
+
+        <div class="service-card" data-aos data-service="engine" onclick="openServiceModal('engine')" style="transition-delay:0.08s">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93l-1.41 1.41M5.34 18.66l-1.41 1.41M2 12h2M20 12h2M6.34 5.34L4.93 6.75M18.66 18.66l1.41 1.41M12 2v2M12 20v2M15.54 15.54l1.41 1.41M7.05 7.05L5.64 8.46"/></svg>
+          </div>
+          <div class="service-name">Engine Repair</div>
+          <p class="service-desc">Full engine service and repair for Mercedes-Benz Sprinter engines, from minor tune-ups to comprehensive overhauls.</p>
+          <div class="service-arrow">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+        </div>
+
+        <div class="service-card" data-aos data-service="electrical" onclick="openServiceModal('electrical')" style="transition-delay:0.16s">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <div class="service-name">Electrical Issues</div>
+          <p class="service-desc">Sprinter electrical systems are complex. We diagnose and repair wiring faults, sensor failures, ECU issues, and more.</p>
+          <div class="service-arrow">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+        </div>
+
+        <div class="service-card" data-aos data-service="fleet" onclick="openServiceModal('fleet')" style="transition-delay:0.24s">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="8" width="22" height="10" rx="2"/><path d="M5 8V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v2"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+          </div>
+          <div class="service-name">Fleet / Work Van Service</div>
+          <p class="service-desc">Keep your entire fleet running at peak performance. Scheduled maintenance plans and priority service for business customers.</p>
+          <div class="service-arrow">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+        </div>
+
+        <div class="service-card" data-aos data-service="maintenance" onclick="openServiceModal('maintenance')" style="transition-delay:0.32s">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <div class="service-name">Maintenance</div>
+          <p class="service-desc">Routine Sprinter van maintenance to keep your van reliable, prevent breakdowns, and help you stay on the road longer.</p>
+          <div class="service-arrow">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       REVIEWS
+  ============================================ -->
+  <section id="reviews">
+    <div class="container">
+      <div class="reviews-header">
+        <span class="section-label">Customer Reviews</span>
+        <h2 class="section-title">What Our Customers Say</h2>
+        <p class="section-sub" style="margin:0 auto;">Real reviews from real Sprinter van owners who trusted us to get the job done right.</p>
+      </div>
+
+      <div class="reviews-grid">
+
+        <div class="review-card" data-aos>
+          <div class="stars">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="review-text">"I felt like family — they treated me like family, especially Eric the owner."</p>
+          <div class="review-author">
+            <div class="review-avatar">SC</div>
+            <div>
+              <div class="review-name">Steven Cunz</div>
+              <div class="review-source"><span class="google-dot"></span> Google Review</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card" data-aos style="transition-delay:0.1s">
+          <div class="stars">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="review-text">"Their service and timeliness is unmatched."</p>
+          <div class="review-author">
+            <div class="review-avatar">EG</div>
+            <div>
+              <div class="review-name">Ethan Galac</div>
+              <div class="review-source"><span class="google-dot"></span> Google Review</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card" data-aos style="transition-delay:0.2s">
+          <div class="stars">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="review-text">"The communication between the mechanics, customer service, and us were wonderful."</p>
+          <div class="review-author">
+            <div class="review-avatar">BE</div>
+            <div>
+              <div class="review-name">Barbara Enter</div>
+              <div class="review-source"><span class="google-dot"></span> Google Review</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="text-align:center;margin-top:40px;">
+        <a href="https://www.google.com/maps/search/Sprinter+Van+City+Fort+Pierce" target="_blank" rel="noopener"
+           style="display:inline-flex;align-items:center;gap:10px;padding:12px 24px;background:var(--bg-glass);border:1px solid var(--border-dim);border-radius:50px;text-decoration:none;color:var(--text-muted);font-size:13px;font-weight:600;transition:var(--transition);"
+           onmouseover="this.style.borderColor='rgba(34,197,94,0.32)';this.style.color='var(--green)'"
+           onmouseout="this.style.borderColor='var(--border-dim)';this.style.color='var(--text-muted)'">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+          </svg>
+          See All 39 Reviews on Google
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14" style="color:var(--green)">
+            <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       WHY CHOOSE US
+  ============================================ -->
+  <section id="why">
+    <div class="container">
+      <div class="why-inner">
+
+        <div class="why-left" data-aos="fade-left">
+          <span class="section-label">Why Choose Us</span>
+          <h2 class="section-title">The Sprinter Van<br>Experts You Can Trust</h2>
+          <p class="section-sub">We're not a general repair shop that fixes everything. We're Sprinter van specialists — and that focus makes all the difference.</p>
+
+          <div class="why-features">
+
+            <div class="why-feature">
+              <div class="why-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="why-feature-text">
+                <span class="why-feature-title">Fast &amp; Effective Repairs</span>
+                <span class="why-feature-desc">We work efficiently without cutting corners. Get your Sprinter back on the road faster than the dealership.</span>
+              </div>
+            </div>
+
+            <div class="why-feature">
+              <div class="why-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="8" width="22" height="10" rx="2"/><path d="M5 8V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v2"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+              </div>
+              <div class="why-feature-text">
+                <span class="why-feature-title">Sprinter Van Focused</span>
+                <span class="why-feature-desc">100% dedicated to Sprinter vans. Every tool, every tech, every process is built around your vehicle.</span>
+              </div>
+            </div>
+
+            <div class="why-feature">
+              <div class="why-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </div>
+              <div class="why-feature-text">
+                <span class="why-feature-title">Honest Communication</span>
+                <span class="why-feature-desc">Clear explanations, upfront pricing, and no surprise charges. You always know what's happening with your van.</span>
+              </div>
+            </div>
+
+            <div class="why-feature">
+              <div class="why-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="why-feature-text">
+                <span class="why-feature-title">Local Fort Pierce Shop</span>
+                <span class="why-feature-desc">A locally owned and operated business on US-1. We're your neighbors, and we treat you like it.</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Real van photo — Why Us -->
+        <div class="why-right" data-aos="fade-right">
+          <div class="why-visual">
+
+            <div class="why-badge-float why-badge-float-1">
+              <div class="float-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </div>
+              <div>
+                <div class="float-label">Fast Diagnostics</div>
+                <div class="float-sub">Same-day results</div>
+              </div>
+            </div>
+
+            <div class="why-van-photo-wrap">
+              <img
+                class="why-van-photo"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Mercedes-Benz_Sprinter_II_%28W906%29_%E2%80%93_Seitenansicht%2C_6._Oktober_2012%2C_W%C3%BClfrath.jpg/1280px-Mercedes-Benz_Sprinter_II_%28W906%29_%E2%80%93_Seitenansicht%2C_6._Oktober_2012%2C_W%C3%BClfrath.jpg"
+                alt="Mercedes-Benz Sprinter Van"
+                onerror="this.onerror=null;this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Simple_Van.svg/640px-Simple_Van.svg.png';"
+              />
+              <div class="why-van-label">
+                <span class="why-van-label-badge">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="10" height="10"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  Mercedes-Benz Sprinter Specialists
+                </span>
+              </div>
+            </div>
+
+            <div class="why-badge-float why-badge-float-2">
+              <div class="float-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div>
+                <div class="float-label">Trusted Specialists</div>
+                <div class="float-sub">Sprinter experts only</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CONTACT
+  ============================================ -->
+  <section id="contact" class="booking">
+    <div class="container">
+      <div class="contact-header">
+        <span class="section-label">Find Us</span>
+        <h2 class="section-title">Visit Sprinter Van City</h2>
+        <p class="section-sub" style="margin:0 auto;">We're conveniently located on US-1 in Fort Pierce. Drop in or call ahead to schedule your service.</p>
+      </div>
+
+      <div class="contact-grid">
+
+        <div class="contact-info" data-aos="fade-left">
+
+          <a href="tel:7724612114" class="contact-card" style="text-decoration:none;">
+            <div class="contact-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.36 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.54A16 16 0 0 0 15.46 16.09l.92-.83a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div class="contact-card-body">
+              <span class="contact-card-label">Phone</span>
+              <span class="contact-card-val">(772) 461-2114</span>
+              <span class="contact-card-sub">Click to call now</span>
+            </div>
+          </a>
+
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="contact-card-body">
+              <span class="contact-card-label">Address</span>
+              <span class="contact-card-val">3151 US-1</span>
+              <span class="contact-card-sub">Fort Pierce, FL 34946</span>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="contact-card-body">
+              <span class="contact-card-label">Business Hours</span>
+              <div class="hours-list">
+                <div class="hours-row"><span class="hours-day">Monday – Friday</span><span class="hours-time">8:00 AM – 5:00 PM</span></div>
+                <div class="hours-row"><span class="hours-day">Saturday</span><span class="hours-time">By Appointment</span></div>
+                <div class="hours-row"><span class="hours-day">Sunday</span><span class="hours-time">Closed</span></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="map-placeholder" data-aos="fade-right">
+          <div class="map-header">
+            <span class="map-dot"></span>
+            3151 US-1, Fort Pierce, FL 34946
+          </div>
+          <div class="map-embed">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3544.7394898862!2d-80.34286!3d27.43892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88def15e3a3aaaab%3A0x5e67ded2e1b17ef4!2s3151%20US-1%2C%20Fort%20Pierce%2C%20FL%2034946!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              title="Sprinter Van City Location Map">
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FINAL CTA
+  ============================================ -->
+  <section id="final-cta">
+    <!-- Real Sprinter van — faint background -->
+    <img
+      class="final-cta-van"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Mercedes-Benz_Sprinter_II_%28W906%29_%E2%80%93_Seitenansicht%2C_6._Oktober_2012%2C_W%C3%BClfrath.jpg/1280px-Mercedes-Benz_Sprinter_II_%28W906%29_%E2%80%93_Seitenansicht%2C_6._Oktober_2012%2C_W%C3%BClfrath.jpg"
+      alt=""
+      aria-hidden="true"
+    />
+    <div class="container">
+      <div class="final-cta-inner">
+
+        <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(34,197,94,0.10);border:1px solid rgba(34,197,94,0.32);border-radius:50px;padding:6px 16px;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--green);">
+          <span style="width:6px;height:6px;background:var(--green);border-radius:50%;box-shadow:0 0 6px var(--green);animation:pulse-dot 1.8s ease-in-out infinite;display:inline-block;"></span>
+          Ready to Help — Call Now
+        </div>
+
+        <h2 class="final-cta-title glow-text">
+          Need Your Sprinter<br>Back on the Road?
+        </h2>
+
+        <p class="final-cta-sub">
+          Don't let van trouble slow down your business or your life. Call Sprinter Van City and get fast, reliable repairs from the specialists.
+        </p>
+
+        <div class="final-cta-actions">
+          <a href="tel:7724612114" class="btn btn-primary btn-lg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="20" height="20">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.36 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.54A16 16 0 0 0 15.46 16.09l.92-.83a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            Call Sprinter Van City
+          </a>
+          <a href="#hero-form" class="btn btn-green btn-lg">Schedule Online</a>
+        </div>
+
+        <p style="font-size:13px;color:var(--text-dim);margin-top:4px;">
+          📍 3151 US-1, Fort Pierce, FL 34946 &nbsp;·&nbsp; ☎ (772) 461-2114
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+  ============================================ -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <a href="#hero" class="footer-logo">
+          <div class="footer-logo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+              <rect x="1" y="8" width="22" height="10" rx="2"/><path d="M5 8V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v2"/>
+              <circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/>
+            </svg>
+          </div>
+          <span class="footer-logo-text">Sprinter Van <span class="g">City</span></span>
+        </a>
+
+        <ul class="footer-links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#why">Why Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="tel:7724612114">(772) 461-2114</a></li>
+        </ul>
+
+        <p class="footer-copy">© 2025 Sprinter Van City · Fort Pierce, FL</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================
+       SERVICE MODAL OVERLAY
+  ============================================ -->
+  <div class="svc-modal-overlay" id="svcModalOverlay" onclick="handleOverlayClick(event)">
+    <div class="svc-modal" id="svcModal" role="dialog" aria-modal="true">
+      <button class="svc-modal-close" onclick="closeServiceModal()" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="svc-modal-icon" id="svcModalIcon"></div>
+      <div class="svc-modal-title" id="svcModalTitle"></div>
+      <div class="svc-modal-tagline" id="svcModalTagline"></div>
+      <p class="svc-modal-desc" id="svcModalDesc"></p>
+      <ul class="svc-modal-list" id="svcModalList"></ul>
+      <div class="svc-modal-divider"></div>
+      <div class="svc-modal-footer">
+        <a href="tel:7724612114" class="svc-modal-phone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.36 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.54A16 16 0 0 0 15.46 16.09l.92-.83a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (772) 461-2114
+        </a>
+        <button class="btn-book-now" onclick="bookNow()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="16" height="16"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Book Now
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <a href="tel:7724612114" class="fab-call">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.36 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.54A16 16 0 0 0 15.46 16.09l.92-.83a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+    </svg>
+    Call Now
+  </a>
+
+  <script>
+    /* ---- Service Modal Data ---- */
+    const SERVICE_DATA = {
+      diagnostics: {
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>',
+        title: 'Diagnostics',
+        tagline: 'Fast, accurate fault detection for your Sprinter van',
+        desc: 'Our advanced computerized diagnostics go beyond just reading a fault code. We use Sprinter-specific scan tools to access every module in your van, giving us the full picture of what\'s happening — so we fix the real problem, not just the symptom.',
+        items: [
+          'Full OBD-II and Mercedes-Benz proprietary system scan',
+          'Check engine, ABS, SRS, and all warning light diagnosis',
+          'Live data monitoring and freeze-frame analysis',
+          'Pre-purchase inspection for used Sprinter vans',
+          'Fault code reading, diagnosis, and clearing',
+          'Accurate estimates before any repair begins'
+        ]
+      },
+      engine: {
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93l-1.41 1.41M5.34 18.66l-1.41 1.41M2 12h2M20 12h2M6.34 5.34L4.93 6.75M18.66 18.66l1.41 1.41M12 2v2M12 20v2M15.54 15.54l1.41 1.41M7.05 7.05L5.64 8.46"/></svg>',
+        title: 'Engine Repair',
+        tagline: 'Expert engine work for Mercedes-Benz Sprinter diesels and gas engines',
+        desc: 'Sprinter engines are highly engineered and require a specialist\'s touch. Whether it\'s a small oil leak or a major overhaul, we have the tools, training, and experience to handle it right — with no guesswork.',
+        items: [
+          'Oil leaks, coolant leaks, and seal replacements',
+          'Timing chain and timing component service',
+          'Turbocharger and intercooler repair',
+          'Fuel injector cleaning and replacement',
+          'Head gasket and cylinder head service',
+          'Complete engine rebuilds and replacements'
+        ]
+      },
+      electrical: {
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>',
+        title: 'Electrical Issues',
+        tagline: 'Solving complex Sprinter electrical faults others can\'t find',
+        desc: 'Sprinter vans are known for complex electrical systems. Warning lights, no-starts, sensor failures, and module faults require specialized knowledge. We have the tools and expertise to trace the problem to the root cause and fix it properly.',
+        items: [
+          'Warning light diagnosis and repair',
+          'Wiring harness inspection and repair',
+          'ECU, TCM, and control module diagnostics',
+          'Battery, alternator, and charging system service',
+          'Sensor replacements (O2, MAF, cam, crank, and more)',
+          'Lighting, fuse box, and relay troubleshooting'
+        ]
+      },
+      fleet: {
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="8" width="22" height="10" rx="2"/><path d="M5 8V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v2"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>',
+        title: 'Fleet / Work Van Service',
+        tagline: 'Keep your entire Sprinter fleet on the road and earning',
+        desc: 'Downtime costs your business money. We offer priority scheduling, fleet accounts, and customized maintenance programs to make sure your vans are serviced efficiently — so you\'re never stuck waiting at the dealership.',
+        items: [
+          'Custom fleet maintenance programs and schedules',
+          'Priority service and fast turnaround for businesses',
+          'Multi-van service on the same visit when possible',
+          'Fleet accounts with detailed service records',
+          'Preventive maintenance to reduce emergency breakdowns',
+          'Oil changes, inspections, and scheduled service intervals'
+        ]
+      },
+      maintenance: {
+        icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>',
+        title: 'Maintenance',
+        tagline: 'Routine care that keeps your Sprinter running longer',
+        desc: 'Regular maintenance is the single best thing you can do to protect your Sprinter van. We follow Mercedes-Benz service intervals and use quality parts to keep your van reliable, efficient, and out of the shop for costly repairs.',
+        items: [
+          'Oil and filter changes using correct spec oils',
+          'Fluid inspections and top-offs (coolant, brake, power steering)',
+          'Air filter and cabin filter replacement',
+          'Tire rotation and pressure checks',
+          'Belt, hose, and suspension inspections',
+          'Spark plug replacement and ignition service'
+        ]
+      }
+    };
+
+    /* ---- Modal open / close ---- */
+    function openServiceModal(serviceKey) {
+      const data = SERVICE_DATA[serviceKey];
+      if (!data) return;
+
+      document.getElementById('svcModalIcon').innerHTML  = data.icon;
+      document.getElementById('svcModalTitle').textContent    = data.title;
+      document.getElementById('svcModalTagline').textContent  = data.tagline;
+      document.getElementById('svcModalDesc').textContent     = data.desc;
+
+      const list = document.getElementById('svcModalList');
+      list.innerHTML = data.items.map(item => `<li>${item}</li>`).join('');
+
+      document.getElementById('svcModalOverlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeServiceModal() {
+      document.getElementById('svcModalOverlay').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function handleOverlayClick(e) {
+      if (e.target === document.getElementById('svcModalOverlay')) closeServiceModal();
+    }
+
+    function bookNow() {
+      closeServiceModal();
+      const booking = document.getElementById('hero-form');
+      if (booking) {
+        const top = booking.getBoundingClientRect().top + window.scrollY - 100;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    }
+
+    /* Close on Escape key */
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeServiceModal();
+    });
+
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+
+    const aosEls = document.querySelectorAll('[data-aos]');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('aos-animate'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    aosEls.forEach(el => observer.observe(el));
+
+    const dateInput = document.getElementById('fdate');
+    if (dateInput) {
+      const t = new Date();
+      dateInput.min = `${t.getFullYear()}-${String(t.getMonth()+1).padStart(2,'0')}-${String(t.getDate()).padStart(2,'0')}`;
+    }
+
+    /* ---- Phone number auto-formatter: 772-333-2232 ---- */
+    const phoneInput = document.getElementById('fphone');
+    if (phoneInput) {
+      phoneInput.addEventListener('input', function (e) {
+        // Strip everything that isn't a digit
+        let digits = this.value.replace(/\D/g, '').slice(0, 10);
+        // Build formatted string with dashes
+        let formatted = '';
+        if (digits.length > 0) formatted  = digits.slice(0, 3);
+        if (digits.length > 3) formatted += '-' + digits.slice(3, 6);
+        if (digits.length > 6) formatted += '-' + digits.slice(6, 10);
+        this.value = formatted;
+      });
+
+      // Also handle backspace so deleting works naturally
+      phoneInput.addEventListener('keydown', function (e) {
+        if (e.key === 'Backspace') {
+          // If cursor is right after a dash, remove the dash too
+          const pos = this.selectionStart;
+          if (pos > 0 && this.value[pos - 1] === '-') {
+            e.preventDefault();
+            this.value = this.value.slice(0, pos - 1) + this.value.slice(pos);
+            this.setSelectionRange(pos - 1, pos - 1);
+          }
+        }
+      });
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('.btn-submit');
+      btn.textContent = '✓ Request Sent!';
+      btn.style.background = 'var(--green)';
+      btn.style.boxShadow = '0 0 22px rgba(34,197,94,0.5)';
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.textContent = 'Request Service →';
+        btn.style.background = '';
+        btn.style.boxShadow = '';
+        btn.disabled = false;
+        e.target.reset();
+      }, 4000);
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const id = a.getAttribute('href').slice(1);
+        const target = document.getElementById(id);
+        if (target) {
+          e.preventDefault();
+          const top = target.getBoundingClientRect().top + window.scrollY - 68;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
