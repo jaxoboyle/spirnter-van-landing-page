@@ -350,12 +350,16 @@
       width: 70%;
       max-width: 900px;
       opacity: 0.13;
+      /* Black-bg PNG: no invert needed. Screen blend drops the black
+         background entirely; only the metallic silver parts bleed through
+         as a faint technical/diesel texture behind the headline. */
       filter: blur(0.5px) brightness(0.80) contrast(1.1) saturate(0.55);
       object-fit: contain;
       object-position: left bottom;
       pointer-events: none;
       z-index: 1;
       mix-blend-mode: screen;
+      /* radial vignette — soft fade at all edges, no hard cutout */
       -webkit-mask-image: radial-gradient(
         ellipse 88% 85% at 38% 58%,
         black 25%,
@@ -494,6 +498,7 @@
     .hero-stat-num {
       font-family: var(--ff-head);
       font-size: 26px;
+            font-size: 26px;
       font-weight: 800;
       color: var(--text-white);
     }
@@ -657,6 +662,7 @@
       flex-shrink: 0;
     }
 
+    /* Alternate yellow/green trust icons */
     .trust-item:nth-child(1) .trust-icon {
       background: rgba(245,200,0,0.10);
       border: 1px solid rgba(245,200,0,0.28);
@@ -705,7 +711,8 @@
       height: 40px;
       background: linear-gradient(180deg, rgba(245,200,0,0.2), rgba(34,197,94,0.2));
     }
-        /* ============================================
+
+    /* ============================================
        SERVICES
     ============================================ */
     #services {
@@ -713,6 +720,7 @@
       position: relative;
     }
 
+    /* Dual-color top line */
     #services::before {
       content: '';
       position: absolute;
@@ -746,6 +754,7 @@
       cursor: pointer;
     }
 
+    /* Alternate yellow/green per card */
     .service-card:nth-child(odd)::after {
       content: '';
       position: absolute;
@@ -876,6 +885,7 @@
       transform: translateY(0);
     }
 
+    /* top accent line */
     .svc-modal::before {
       content: '';
       position: absolute;
@@ -1077,6 +1087,7 @@
     }
     .review-card:hover { transform: translateY(-5px); }
 
+    /* Top accent line per card */
     .review-card::after {
       content: '';
       position: absolute;
@@ -1087,7 +1098,7 @@
     }
     .review-card:nth-child(odd)::after {
       background: linear-gradient(90deg, transparent, var(--green), transparent);
-    }
+          }
     .review-card:nth-child(even)::after {
       background: linear-gradient(90deg, transparent, var(--yellow), transparent);
     }
@@ -1245,6 +1256,7 @@
       line-height: 1.6;
     }
 
+    /* Right — real van photo */
     .why-right { display: flex; align-items: center; justify-content: center; }
 
     .why-visual {
@@ -1272,6 +1284,7 @@
       pointer-events: none;
     }
 
+    /* Top accent line */
     .why-van-photo-wrap::after {
       content: '';
       position: absolute;
@@ -1290,6 +1303,7 @@
       min-height: 260px;
     }
 
+    /* Label over photo */
     .why-van-label {
       position: absolute;
       bottom: 0; left: 0; right: 0;
@@ -1475,6 +1489,7 @@
     .hours-day  { color: var(--text-muted); }
     .hours-time { color: var(--text-white); font-weight: 500; }
 
+    /* Map */
     .map-placeholder {
       background: rgba(38,34,14,0.90);
       border: 1px solid rgba(34,197,94,0.38);
@@ -1524,6 +1539,7 @@
       text-align: center;
     }
 
+    /* Real van photo as faint CTA background */
     .final-cta-van {
       position: absolute;
       inset: 0;
@@ -1715,9 +1731,10 @@
       .hero-stats { gap: 20px; }
       .final-cta-actions .btn-lg { width: 100%; justify-content: center; }
 
-      /* ---- Mobile performance ---- */
+      /* ---- Mobile performance: kills the #1 scroll jank cause on iOS/Android ---- */
       body { background-attachment: scroll; }
 
+      /* Reduce backdrop-filter cost on mobile */
       nav,
       .mobile-menu          { backdrop-filter: blur(10px); }
       .hero-form-card        { backdrop-filter: blur(12px); }
@@ -1738,6 +1755,7 @@
        PREMIUM POLISH — ATMOSPHERE PASS 3
     ============================================ */
 
+    /* Services — strong green spotlight from top + gold side */
     #services {
       background:
         radial-gradient(ellipse 80% 55% at 50% -10%, rgba(34,197,94,0.20) 0%, transparent 55%),
@@ -1746,6 +1764,7 @@
         transparent;
     }
 
+    /* Why Us — green right spotlight + gold left accent */
     #why {
       background:
         radial-gradient(ellipse 65% 75% at 100% 50%, rgba(34,197,94,0.16) 0%, transparent 60%),
@@ -1753,6 +1772,7 @@
         transparent;
     }
 
+    /* Reviews — warm lifted gradient + dual corner glows */
     #reviews {
       background:
         radial-gradient(ellipse 90% 60% at 50%  0%,   rgba(34,197,94,0.13) 0%, transparent 55%),
@@ -1761,6 +1781,7 @@
         linear-gradient(180deg, #292610 0%, #252212 50%, #292610 100%);
     }
 
+    /* Contact — warm lifted gradient + top green glow */
     #contact {
       background:
         radial-gradient(ellipse 80% 55% at 50% 0%,   rgba(34,197,94,0.12) 0%, transparent 55%),
@@ -1768,6 +1789,7 @@
         linear-gradient(180deg, #292610 0%, #252212 50%, #292610 100%);
     }
 
+    /* Final CTA — vivid dual-color spotlight */
     #final-cta::before {
       background:
         radial-gradient(ellipse 75% 75% at 50% 50%, rgba(34,197,94,0.22) 0%, transparent 65%),
@@ -1775,7 +1797,7 @@
         radial-gradient(ellipse 35% 55% at 85% 20%, rgba(245,200,0,0.11) 0%, transparent 60%),
         linear-gradient(160deg, #242212 0%, #2a2614 50%, #242212 100%);
     }
-
+    /* Service cards — warm glass surface + colored shimmer top */
     .service-card {
       background: rgba(255,255,255,0.09);
     }
@@ -1788,6 +1810,7 @@
       box-shadow: 0 4px 32px rgba(0,0,0,0.28), inset 0 1px 0 rgba(245,200,0,0.18);
     }
 
+    /* Service icons — vivid glowing boxes */
     .service-card:nth-child(odd) .service-icon {
       background: rgba(34,197,94,0.22);
       border-color: rgba(34,197,94,0.48);
@@ -1799,6 +1822,7 @@
       box-shadow: 0 0 18px rgba(245,200,0,0.20);
     }
 
+    /* Review cards — warm lifted surface + top shimmer */
     .review-card:nth-child(odd) {
       border-color: rgba(34,197,94,0.18);
       box-shadow: 0 4px 28px rgba(0,0,0,0.24), inset 0 1px 0 rgba(34,197,94,0.16);
@@ -1809,6 +1833,7 @@
     }
     .review-card::before { color: rgba(34,197,94,0.18); }
 
+    /* Why feature cards — elevated warm glass */
     .why-feature {
       background: rgba(255,255,255,0.09);
       border-color: rgba(255,255,255,0.18);
@@ -1825,11 +1850,13 @@
       box-shadow: 0 0 20px rgba(245,200,0,0.20);
     }
 
+    /* Why van photo — vivid border presence */
     .why-van-photo-wrap {
       border-color: rgba(34,197,94,0.44);
       box-shadow: 0 0 100px rgba(34,197,94,0.32), 0 20px 56px rgba(0,0,0,0.40);
     }
 
+    /* Floating badges */
     .why-badge-float-1 {
       border-color: rgba(245,200,0,0.55);
       box-shadow: 0 0 32px rgba(245,200,0,0.18), 0 8px 32px rgba(0,0,0,0.40);
@@ -1839,6 +1866,7 @@
       box-shadow: 0 0 32px rgba(34,197,94,0.20), 0 8px 32px rgba(0,0,0,0.40);
     }
 
+    /* Contact cards */
     .contact-card {
       box-shadow: 0 4px 24px rgba(0,0,0,0.22), inset 0 1px 0 rgba(255,255,255,0.06);
     }
@@ -1854,8 +1882,10 @@
       box-shadow: 0 0 18px rgba(245,200,0,0.20);
     }
 
+    /* Map */
     .map-header { border-bottom-color: rgba(34,197,94,0.24); }
 
+    /* Trust icons */
     .trust-item:nth-child(1) .trust-icon,
     .trust-item:nth-child(5) .trust-icon {
       background: rgba(245,200,0,0.22);
@@ -1869,31 +1899,38 @@
       box-shadow: 0 0 16px rgba(34,197,94,0.20);
     }
 
+    /* Nav logo */
     .nav-logo-icon {
       box-shadow: 0 0 28px rgba(245,200,0,0.70), 0 0 12px rgba(34,197,94,0.40);
     }
 
+    /* All buttons */
     .btn-submit   { box-shadow: 0 0 36px rgba(34,197,94,0.58); }
     .btn-primary  { box-shadow: 0 0 34px rgba(245,200,0,0.60); }
     .btn-green    { box-shadow: 0 0 34px rgba(34,197,94,0.56); }
     .btn-book-now { box-shadow: 0 0 32px rgba(34,197,94,0.54); }
     .fab-call     { box-shadow: 0 0 36px rgba(34,197,94,0.60); }
 
+    /* Scan line */
     .scan-line {
       background: linear-gradient(90deg, transparent, rgba(34,197,94,0.65), rgba(245,200,0,0.42), transparent);
     }
 
+    /* Hero badge */
     .hero-badge {
       background: rgba(34,197,94,0.22);
       border-color: rgba(34,197,94,0.58);
       box-shadow: 0 0 20px rgba(34,197,94,0.22);
     }
 
+    /* Hero stats */
     .hero-stats { border-top-color: rgba(34,197,94,0.36); }
 
+    /* Section accent lines */
     #services::before { background: linear-gradient(180deg, transparent, rgba(34,197,94,0.65)); }
     #why::before      { background: linear-gradient(180deg, transparent, rgba(245,200,0,0.65)); }
 
+    /* Scrollbar */
     ::-webkit-scrollbar-thumb {
       background: linear-gradient(180deg, var(--yellow), var(--green));
     }
@@ -1901,7 +1938,10 @@
   </style>
 </head>
 <body>
-    <!-- NAVBAR -->
+
+  <!-- ============================================
+       NAVBAR
+  ============================================ -->
   <nav id="navbar">
     <div class="nav-inner">
       <a href="#hero" class="nav-logo">
@@ -1945,7 +1985,9 @@
     <a href="tel:7724612114" style="color:var(--yellow);font-weight:700;">📞 (772) 461-2114</a>
   </div>
 
-  <!-- HERO -->
+  <!-- ============================================
+       HERO
+  ============================================ -->
   <section id="hero">
     <div class="hero-bg"></div>
     <div class="hero-grid"></div>
@@ -1954,6 +1996,7 @@
     <div class="hero-orb hero-orb-2"></div>
     <div class="hero-orb hero-orb-3"></div>
 
+    <!-- Engine cutaway — cinematic faint hero background -->
     <img
       class="hero-van-bg"
       src="engine-bg-sm.png"
@@ -2052,7 +2095,9 @@
     </div>
   </section>
 
-  <!-- TRUST BAR -->
+  <!-- ============================================
+       TRUST BAR
+  ============================================ -->
   <section id="trust">
     <div class="container">
       <div class="trust-inner">
@@ -2116,7 +2161,9 @@
     </div>
   </section>
 
-  <!-- SERVICES -->
+  <!-- ============================================
+       SERVICES
+  ============================================ -->
   <section id="services">
     <div class="container">
       <div class="services-header">
@@ -2176,7 +2223,9 @@
     </div>
   </section>
 
-  <!-- REVIEWS -->
+  <!-- ============================================
+       REVIEWS
+  ============================================ -->
   <section id="reviews">
     <div class="container">
       <div class="reviews-header">
@@ -2263,7 +2312,9 @@
     </div>
   </section>
 
-  <!-- WHY CHOOSE US -->
+  <!-- ============================================
+       WHY CHOOSE US
+  ============================================ -->
   <section id="why">
     <div class="container">
       <div class="why-inner">
@@ -2318,7 +2369,7 @@
           </div>
         </div>
 
-        <!-- Van photo -->
+        <!-- Real van photo — Why Us -->
         <div class="why-right" data-aos="fade-right">
           <div class="why-visual">
 
@@ -2366,7 +2417,9 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
+  <!-- ============================================
+       CONTACT
+  ============================================ -->
   <section id="contact" class="booking">
     <div class="container">
       <div class="contact-header">
@@ -2435,12 +2488,16 @@
     </div>
   </section>
 
-  <!-- FINAL CTA -->
+  <!-- ============================================
+       FINAL CTA
+  ============================================ -->
   <section id="final-cta">
+    <!-- Real Sprinter van — faint background -->
     <img
       class="final-cta-van"
       src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Mercedes-Benz_Sprinter_II_%28W906%29_%E2%80%93_Seitenansicht%2C_6._Oktober_2012%2C_W%C3%BClfrath.jpg/1280px-Mercedes-Benz_Sprinter_II_%28W906%29_%E2%80%93_Seitenansicht%2C_6._Oktober_2012%2C_W%C3%BClfrath.jpg"
       alt=""
+            alt=""
       aria-hidden="true"
       loading="lazy"
       decoding="async"
@@ -2449,8 +2506,7 @@
       <div class="final-cta-inner">
 
         <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(34,197,94,0.10);border:1px solid rgba(34,197,94,0.32);border-radius:50px;padding:6px 16px;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--green);">
-          <span style="width:6px;height:6px;background:var(--green);border-radius:50%;box-shadow:
-            0 0 6px var(--green);animation:pulse-dot 1.8s ease-in-out infinite;display:inline-block;"></span>
+          <span style="width:6px;height:6px;background:var(--green);border-radius:50%;box-shadow:0 0 6px var(--green);animation:pulse-dot 1.8s ease-in-out infinite;display:inline-block;"></span>
           Ready to Help — Call Now
         </div>
 
@@ -2480,7 +2536,9 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- ============================================
+       FOOTER
+  ============================================ -->
   <footer>
     <div class="container">
       <div class="footer-inner">
@@ -2507,7 +2565,9 @@
     </div>
   </footer>
 
-  <!-- SERVICE MODAL -->
+  <!-- ============================================
+       SERVICE MODAL OVERLAY
+  ============================================ -->
   <div class="svc-modal-overlay" id="svcModalOverlay" onclick="handleOverlayClick(event)">
     <div class="svc-modal" id="svcModal" role="dialog" aria-modal="true">
       <button class="svc-modal-close" onclick="closeServiceModal()" aria-label="Close">
@@ -2540,6 +2600,7 @@
   </a>
 
   <script>
+    /* ---- Service Modal Data ---- */
     const SERVICE_DATA = {
       diagnostics: {
         icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>',
@@ -2613,15 +2674,19 @@
       }
     };
 
+    /* ---- Modal open / close ---- */
     function openServiceModal(serviceKey) {
       const data = SERVICE_DATA[serviceKey];
       if (!data) return;
+
       document.getElementById('svcModalIcon').innerHTML  = data.icon;
       document.getElementById('svcModalTitle').textContent    = data.title;
       document.getElementById('svcModalTagline').textContent  = data.tagline;
       document.getElementById('svcModalDesc').textContent     = data.desc;
+
       const list = document.getElementById('svcModalList');
       list.innerHTML = data.items.map(item => `<li>${item}</li>`).join('');
+
       document.getElementById('svcModalOverlay').classList.add('open');
       document.body.style.overflow = 'hidden';
     }
@@ -2644,6 +2709,7 @@
       }
     }
 
+    /* Close on Escape key */
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') closeServiceModal();
     });
@@ -2678,18 +2744,24 @@
       dateInput.min = `${t.getFullYear()}-${String(t.getMonth()+1).padStart(2,'0')}-${String(t.getDate()).padStart(2,'0')}`;
     }
 
+    /* ---- Phone number auto-formatter: 772-333-2232 ---- */
     const phoneInput = document.getElementById('fphone');
     if (phoneInput) {
-      phoneInput.addEventListener('input', function () {
+      phoneInput.addEventListener('input', function (e) {
+        // Strip everything that isn't a digit
         let digits = this.value.replace(/\D/g, '').slice(0, 10);
+        // Build formatted string with dashes
         let formatted = '';
         if (digits.length > 0) formatted  = digits.slice(0, 3);
         if (digits.length > 3) formatted += '-' + digits.slice(3, 6);
         if (digits.length > 6) formatted += '-' + digits.slice(6, 10);
         this.value = formatted;
       });
+
+      // Also handle backspace so deleting works naturally
       phoneInput.addEventListener('keydown', function (e) {
         if (e.key === 'Backspace') {
+          // If cursor is right after a dash, remove the dash too
           const pos = this.selectionStart;
           if (pos > 0 && this.value[pos - 1] === '-') {
             e.preventDefault();
